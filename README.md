@@ -1,6 +1,6 @@
 # Supplement Veri Seti (Türkçe)
 
-Bu veri seti, spor ve fitness alanlarında kullanılan takviyeler (supplement) hakkında kapsamlı bilgiler içeren Türkçe bir kaynaktır. Veri seti, GPT-4 ile oluşturulmuştur ve çeşitli takviyeler hakkında bilimsel temelli bilgiler sunmaktadır.
+Bu veri seti, spor ve fitness alanlarında kullanılan takviyeler (supplement) hakkında kapsamlı bilgiler içeren Türkçe bir kaynaktır. Veri seti, GPT-4o ile oluşturulmuştur ve çeşitli takviyeler hakkında bilimsel temelli bilgiler sunmaktadır.
 
 ## Veri Seti İçeriği
 
@@ -44,7 +44,7 @@ Veri seti hakkında sorularınız veya önerileriniz için GitHub üzerinden ile
 
 # Supplements Dataset (Turkish)
 
-This dataset contains comprehensive information about supplements used in sports and fitness, in Turkish. The dataset was created using GPT-4 and provides scientifically-based information about various supplements.
+This dataset contains comprehensive information about supplements used in sports and fitness, in Turkish. The dataset was created using GPT-4o and provides scientifically-based information about various supplements.
 
 ## Dataset Content
 
