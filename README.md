@@ -19,6 +19,7 @@ Her takviye için aşağıdaki bilgiler mevcuttur:
 - Yaygın Dozaj
 - Riskler
 - Kaynak Bağlantıları
+- Görsel URL'si (GitHub üzerindeki görsele doğrudan bağlantı)
 
 ## Veri Seti Kullanımı
 
@@ -27,6 +28,31 @@ Bu veri seti şu amaçlarla kullanılabilir:
 - Spor ve sağlık içeriği oluşturanlar için kaynak
 - Fitness eğitmenleri ve sağlık profesyonelleri için eğitim materyali
 - Supplement seçiminde tüketicilere yardımcı olmak için bilgilendirme
+
+### Örnek Python Kullanımı
+
+```python
+# Görselleri kullanma örneği
+import requests
+from PIL import Image
+from io import BytesIO
+
+# JSON verisinden supplement bilgisi al
+with open('supplements.json', 'r', encoding='utf-8') as file:
+    data = json.load(file)
+
+# Belirli bir supplement için görseli indir
+supplement_name = "Kreatin"
+for item in data:
+    if item['name'] == supplement_name:
+        # Görseli URL'den indir
+        response = requests.get(item['image_url'])
+        img = Image.open(BytesIO(response.content))
+        # Görseli kaydet
+        img.save(f"{supplement_name}.png")
+        print(f"Görsel kaydedildi: {supplement_name}.png")
+        break
+```
 
 ## Uyarı
 
@@ -63,6 +89,7 @@ For each supplement, the following information is available:
 - Common Dosage
 - Risks
 - Source Links
+- Image URL (Direct link to the image on GitHub)
 
 ## Dataset Usage
 
@@ -71,6 +98,31 @@ This dataset can be used for:
 - Resource for sports and health content creators
 - Educational material for fitness trainers and health professionals
 - Informing consumers to help with supplement choices
+
+### Example Python Usage
+
+```python
+# Example of using images
+import requests
+from PIL import Image
+from io import BytesIO
+
+# Get supplement information from JSON data
+with open('supplements.json', 'r', encoding='utf-8') as file:
+    data = json.load(file)
+
+# Download image for a specific supplement
+supplement_name = "Kreatin"
+for item in data:
+    if item['name'] == supplement_name:
+        # Download image from URL
+        response = requests.get(item['image_url'])
+        img = Image.open(BytesIO(response.content))
+        # Save the image
+        img.save(f"{supplement_name}.png")
+        print(f"Image saved: {supplement_name}.png")
+        break
+```
 
 ## Warning
 
